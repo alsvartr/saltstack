@@ -1,0 +1,22 @@
+[general]
+pid_dir = {{ salt.pillar.get('atceph:pid_dir') }}
+
+[ceph]
+bin_dir = {{ salt.pillar.get('atceph:ceph:bin_dir') }}
+cmd_prefix = {{ salt.pillar.get('atceph:ceph:cmd_prefix') }}
+config = {{ salt.pillar.get('atceph:ceph:config') }}
+client = {{ salt.pillar.get('atceph:ceph:client') }}
+
+[rbd_backup]
+snap_keep = {{ salt.pillar.get('atceph:rbd_backup:snap_keep') }}
+local_keep = {{ salt.pillar.get('atceph:rbd_backup:local_keep') }}
+export_dir = {{ salt.pillar.get('atceph:rbd_backup:export_dir') }}
+export_fname = {{ salt.pillar.get('atceph:rbd_backup:export_fname') }}
+arch_cmd = {{ salt.pillar.get('atceph:rbd_backup:arch_cmd') }}
+max_export_threads = {{ salt.pillar.get('atceph:rbd_backup:max_export_threads') }}
+max_archive_threads = {{ salt.pillar.get('atceph:rbd_backup:max_archive_threads') }}
+exclude_file = {{ salt.pillar.get('atceph:rbd_backup:exclude_file') }}
+stat_file = {{ salt.pillar.get('atceph:rbd_backup:stat_file') }}
+
+[rbd_mapper]
+map_file = {{ salt.pillar.get('atceph:rbd_mapper:map_file') }}
