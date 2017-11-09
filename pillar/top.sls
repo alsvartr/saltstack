@@ -1,0 +1,3 @@
+nodes:
+  '*':
+    - custom.pillar
